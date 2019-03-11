@@ -15,6 +15,9 @@ required by interface.
 
 
 `Type Assertions`
-1. Type assertion is an operation performed on Intyerfaces.
+1. Type assertion is an operation performed on Interfaces.
 2. It takes the form of x.(T) where x is expression of interface type and T is a type called "Asserted Type"
 3. A type assertion checks whether the dynamic type of its operand matches the asserted type.
+
+4. t := i.(T) i checks if i implements interface T and assigns the underlying concrete value of i to t, in case it does not it panics.
+5. t, ok := i.(T), if T is not an interface, it checks whether dynamic value of i is identical to t and assigns t the concrete value of i  
